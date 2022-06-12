@@ -8,9 +8,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          child: const Text('about'),
-          onPressed: () => Navigator.pushNamed(context, '/about'),
-        ),
+            onPressed: () => Navigator.pushNamed(context, '/about'),
+            child: Text(
+              'about',
+              style: Theme.of(context).textTheme.button,
+            )),
       ),
     );
   }

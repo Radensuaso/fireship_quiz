@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'pages/pages.dart';
 import 'routes.dart';
+import 'themes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,11 +20,6 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      routes: appRoutes,
-      title: 'Fireship quiz',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-    );
+        title: 'Fireship quiz', routes: appRoutes, theme: appTheme);
   }
 }
