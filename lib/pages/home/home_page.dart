@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../services/services.dart';
+import '../../shared/error_message.dart';
 import '../pages.dart';
 
 class HomePage extends StatelessWidget {
