@@ -3,6 +3,7 @@ import 'package:fireship_quiz/firebase_options.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/pages.dart';
+import 'routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,11 +19,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      routes: appRoutes,
+      title: 'Fireship quiz',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
