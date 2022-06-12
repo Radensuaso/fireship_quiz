@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "174982843643",
+    "project_id": "fireship-quiz-6c0a9",
+    "storage_bucket": "fireship-quiz-6c0a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174982843643:android:9a53a48899cd5914e5345e",
+        "android_client_info": {
+          "package_name": "io.fireship.fireship_quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174982843643-d1sg43afoq589508ofcf6q449dh560on.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjsS3vcIhv0W2vAuXrHm2Kf-4rMdi5ybM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174982843643-d1sg43afoq589508ofcf6q449dh560on.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
