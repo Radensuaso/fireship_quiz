@@ -19,14 +19,18 @@ class LoginPage extends StatelessWidget {
             const FlutterLogo(
               size: 150,
             ),
-            Flexible(
-              child: LoginButton(
-                icon: FontAwesomeIcons.userNinja,
-                text: 'Continue as Guest',
-                loginMethod: AuthService().anonymLogin,
-                color: Colors.deepPurple,
-              ),
-            )
+            LoginButton(
+              icon: FontAwesomeIcons.userNinja,
+              text: 'Continue as Guest',
+              loginMethod: AuthService().anonymLogin,
+              color: Colors.deepPurple,
+            ),
+            LoginButton(
+              text: 'Sign in with Google',
+              icon: FontAwesomeIcons.google,
+              color: Colors.red,
+              loginMethod: AuthService().googleLogin,
+            ),
           ],
         ),
       ),
