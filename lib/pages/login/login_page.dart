@@ -18,41 +18,24 @@ class LoginPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: Platform.isAndroid
-              ? [
-                  const FlutterLogo(
-                    size: 150,
-                  ),
-                  LoginButton(
-                    icon: FontAwesomeIcons.userNinja,
-                    text: 'Continue as Guest',
-                    loginMethod: AuthService().anonymLogin,
-                    color: Colors.deepPurple,
-                  ),
-                  LoginButton(
-                    text: 'Sign in with Google',
-                    icon: FontAwesomeIcons.google,
-                    color: Colors.red,
-                    loginMethod: AuthService().googleLogin,
-                  ),
-                ]
-              : [
-                  const FlutterLogo(
-                    size: 150,
-                  ),
-                  LoginButton(
-                    icon: FontAwesomeIcons.userNinja,
-                    text: 'Continue as Guest',
-                    loginMethod: AuthService().anonymLogin,
-                    color: Colors.deepPurple,
-                  ),
-                  LoginButton(
-                    text: 'Sign in with Google',
-                    icon: FontAwesomeIcons.google,
-                    color: Colors.red,
-                    loginMethod: AuthService().googleLogin,
-                  ),
-                  FutureBuilder<Object>(
+          children: [
+            const FlutterLogo(
+              size: 150,
+            ),
+            LoginButton(
+              icon: FontAwesomeIcons.userNinja,
+              text: 'Continue as Guest',
+              loginMethod: AuthService().anonymLogin,
+              color: Colors.deepPurple,
+            ),
+            LoginButton(
+              text: 'Sign in with Google',
+              icon: FontAwesomeIcons.google,
+              color: Colors.red,
+              loginMethod: AuthService().googleLogin,
+            ),
+            !Platform.isAndroid
+                ? FutureBuilder<Object>(
                     future: SignInWithApple.isAvailable(),
                     builder: (context, snapshot) {
                       if (snapshot.data == true) {
@@ -62,11 +45,12 @@ class LoginPage extends StatelessWidget {
                           },
                         );
                       } else {
-                        return Container();
+                        return const SizedBox.shrink();
                       }
                     },
-                  ),
-                ],
+                  )
+                : const SizedBox.shrink(),
+          ],
         ),
       ),
     );
