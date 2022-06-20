@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../services/services.dart';
-import '../../shared/error_message.dart';
+import '../../shared/shared.dart';
 import '../pages.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       stream: AuthService().userStream,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const LoadingPage();
+          return const Center(child: Loader());
         } else if (snapshot.hasError) {
           return const Center(
             child: ErrorMessage(),

@@ -22,28 +22,30 @@ class LoginPage extends StatelessWidget {
             const FlutterLogo(
               size: 150,
             ),
-            LoginButton(
+            Flexible(
+                child: LoginButton(
               icon: FontAwesomeIcons.userNinja,
               text: 'Continue as Guest',
               loginMethod: AuthService().anonymLogin,
               color: Colors.deepPurple,
-            ),
-            LoginButton(
+            )),
+            Flexible(
+                child: LoginButton(
               text: 'Sign in with Google',
               icon: FontAwesomeIcons.google,
               color: Colors.red,
               loginMethod: AuthService().googleLogin,
-            ),
+            )),
             !Platform.isAndroid
                 ? FutureBuilder<Object>(
                     future: SignInWithApple.isAvailable(),
                     builder: (context, snapshot) {
                       if (snapshot.data == true) {
-                        return SignInWithAppleButton(
+                        return Flexible(child: SignInWithAppleButton(
                           onPressed: () {
                             AuthService().signInWithApple();
                           },
-                        );
+                        ));
                       } else {
                         return const SizedBox.shrink();
                       }
