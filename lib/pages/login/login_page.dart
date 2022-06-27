@@ -36,22 +36,22 @@ class LoginPage extends StatelessWidget {
               color: Colors.red,
               loginMethod: AuthService().googleLogin,
             )),
-            !Platform.isAndroid
+            /* !Platform.isAndroid
                 ? FutureBuilder<Object>(
                     future: SignInWithApple.isAvailable(),
                     builder: (context, snapshot) {
                       if (snapshot.data == true) {
-                        return Flexible(child: SignInWithAppleButton(
+                        return SignInWithAppleButton(
                           onPressed: () {
                             AuthService().signInWithApple();
                           },
-                        ));
+                        );
                       } else {
                         return const SizedBox.shrink();
                       }
                     },
                   )
-                : const SizedBox.shrink(),
+                : const SizedBox.shrink(), */
           ],
         ),
       ),
