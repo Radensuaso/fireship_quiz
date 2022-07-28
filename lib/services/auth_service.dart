@@ -14,7 +14,7 @@ class AuthService {
   Future<void> anonymLogin() async {
     try {
       await FirebaseAuth.instance.signInAnonymously();
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException catch (_) {
       // handle error
     }
   }
@@ -33,7 +33,7 @@ class AuthService {
       );
 
       await FirebaseAuth.instance.signInWithCredential(authCredential);
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException catch (_) {
       // handle error
     }
   }
