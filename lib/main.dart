@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:fireship_quiz/firebase_options.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'routes.dart';
+import 'services/services.dart';
 import 'themes.dart';
 
 void main() async {
@@ -18,7 +20,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Fireship quiz', routes: appRoutes, theme: appTheme);
+    return StreamProvider(
+      create: (_) => FirestoreService().streamReport(),
+      initialData: Report(),
+      child: MaterialApp(
+          title: 'Fireship quiz', routes: appRoutes, theme: appTheme),
+    );
   }
 }
