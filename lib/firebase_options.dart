@@ -45,17 +45,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyAY-n4vTeJHbvTCnWEqldZq0zf1XgC1NuA',
-    appId: '1:174982843643:web:81285001f1810319e5345e',
+    appId: '1:174982843643:web:b576c85d825e39b8e5345e',
     messagingSenderId: '174982843643',
     projectId: 'fireship-quiz-6c0a9',
     authDomain: 'fireship-quiz-6c0a9.firebaseapp.com',
     storageBucket: 'fireship-quiz-6c0a9.appspot.com',
-    measurementId: 'G-Q5PMSV6392',
+    measurementId: 'G-N2CZCF6JLF',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCjsS3vcIhv0W2vAuXrHm2Kf-4rMdi5ybM',
-    appId: '1:174982843643:android:9a53a48899cd5914e5345e',
+    appId: '1:174982843643:android:3a686a044f877baee5345e',
     messagingSenderId: '174982843643',
     projectId: 'fireship-quiz-6c0a9',
     storageBucket: 'fireship-quiz-6c0a9.appspot.com',
@@ -63,20 +63,22 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDlsBicEhkVW3KAEKlLM6NlMoKl6VGsYA4',
-    appId: '1:174982843643:ios:22f834a71876c1a5e5345e',
+    appId: '1:174982843643:ios:48841c94630c7a44e5345e',
     messagingSenderId: '174982843643',
     projectId: 'fireship-quiz-6c0a9',
     storageBucket: 'fireship-quiz-6c0a9.appspot.com',
+    androidClientId: '174982843643-4debi9ogu789mliiqniumk7ocpvhbid1.apps.googleusercontent.com',
     iosClientId: '174982843643-1a6kvgo701f5kqi3tu8sb8vch4kvkqpj.apps.googleusercontent.com',
     iosBundleId: 'io.fireship.fireshipQuiz',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyDlsBicEhkVW3KAEKlLM6NlMoKl6VGsYA4',
-    appId: '1:174982843643:ios:22f834a71876c1a5e5345e',
+    appId: '1:174982843643:ios:48841c94630c7a44e5345e',
     messagingSenderId: '174982843643',
     projectId: 'fireship-quiz-6c0a9',
     storageBucket: 'fireship-quiz-6c0a9.appspot.com',
+    androidClientId: '174982843643-4debi9ogu789mliiqniumk7ocpvhbid1.apps.googleusercontent.com',
     iosClientId: '174982843643-1a6kvgo701f5kqi3tu8sb8vch4kvkqpj.apps.googleusercontent.com',
     iosBundleId: 'io.fireship.fireshipQuiz',
   );

@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:fireship_quiz/firebase_options.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/pages.dart';
 import 'routes.dart';
 import 'themes.dart';
 
