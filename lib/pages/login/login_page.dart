@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
               color: Colors.red,
               loginMethod: AuthService().googleLogin,
             )),
-            /* !Platform.isAndroid
+            Platform.isIOS || Platform.isMacOS
                 ? FutureBuilder<Object>(
                     future: SignInWithApple.isAvailable(),
                     builder: (context, snapshot) {
@@ -51,7 +51,7 @@ class LoginPage extends StatelessWidget {
                       }
                     },
                   )
-                : const SizedBox.shrink(), */
+                : const SizedBox.shrink(),
           ],
         ),
       ),

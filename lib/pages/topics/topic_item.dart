@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../pages/pages.dart';
-import '../services/services.dart';
+import '../pages.dart';
+import '../../services/services.dart';
 
 class TopicItem extends StatelessWidget {
   const TopicItem({super.key, required this.topic});

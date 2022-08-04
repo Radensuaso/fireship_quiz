@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../services/services.dart';
+import '../../shared/shared.dart';
 
 class TopicPage extends StatelessWidget {
   final Topic topic;
@@ -24,6 +25,7 @@ class TopicPage extends StatelessWidget {
           style: const TextStyle(
               height: 2, fontSize: 20, fontWeight: FontWeight.bold),
         ),
+        QuizList(topic: topic)
       ]),
     );
   }
