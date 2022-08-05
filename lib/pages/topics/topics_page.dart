@@ -1,10 +1,8 @@
-import 'package:fireship_quiz/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 import '../../services/services.dart';
 import '../../shared/shared.dart';
-import 'topic_drawer.dart';
-import 'topic_item.dart';
+import '../pages.dart';
 
 class TopicsPage extends StatelessWidget {
   const TopicsPage({super.key});

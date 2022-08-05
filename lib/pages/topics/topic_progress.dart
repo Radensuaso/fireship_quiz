@@ -1,8 +1,8 @@
-import 'package:fireship_quiz/shared/progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../services/services.dart';
+import '../../shared/shared.dart';
 
 class TopicProgress extends StatelessWidget {
   final Topic topic;

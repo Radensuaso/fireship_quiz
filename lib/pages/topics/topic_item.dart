@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../pages.dart';
 import '../../services/services.dart';
-import 'topic_progress.dart';
 
 class TopicItem extends StatelessWidget {
   final Topic topic;
