@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       stream: AuthService().userStream,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: Loader());
+          return const LoadingPage();
         } else if (snapshot.hasError) {
           return const Center(
             child: ErrorMessage(),

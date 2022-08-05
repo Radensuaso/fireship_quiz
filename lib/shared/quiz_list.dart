@@ -22,7 +22,9 @@ class QuizList extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => QuizPage()));
+                    builder: (BuildContext context) => QuizPage(
+                          quizId: quiz.id,
+                        )));
               },
               child: Container(
                 padding: const EdgeInsets.all(8),

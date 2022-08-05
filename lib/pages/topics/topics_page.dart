@@ -1,3 +1,4 @@
+import 'package:fireship_quiz/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 import '../../services/services.dart';
@@ -14,7 +15,7 @@ class TopicsPage extends StatelessWidget {
       future: FirestoreService().getTopics(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Loader();
+          return const LoadingPage();
         } else if (snapshot.hasError) {
           return Center(
             child: ErrorMessage(message: snapshot.error.toString()),
