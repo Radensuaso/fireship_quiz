@@ -5,6 +5,7 @@ import '../../shared/shared.dart';
 
 class TopicDrawer extends StatelessWidget {
   final List<Topic> topics;
+
   const TopicDrawer({super.key, required this.topics});
 
   @override

@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../pages.dart';
 import '../../services/services.dart';
+import 'topic_progress.dart';
 
 class TopicItem extends StatelessWidget {
-  const TopicItem({super.key, required this.topic});
-
   final Topic topic;
+
+  const TopicItem({super.key, required this.topic});
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +50,7 @@ class TopicItem extends StatelessWidget {
                   ),
                 ),
               ),
+              Flexible(child: TopicProgress(topic: topic)),
               // Flexible(child: TopicProgress(topic: topic)),
             ],
           ),
